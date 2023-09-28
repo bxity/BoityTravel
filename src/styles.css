@@ -1,26 +1,49 @@
-header {
-    background-image: url("../images/ShanghaiHeader.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 200px;
-}
-
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Poppins", sans-serif;
   background: #272044;
 }
 
-.header-container {
+.container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-gap: 64px;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/ShanghaiHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 200px 0;
+}
 
 header h1 {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 96px;
   line-height: 1;
   margin: 30px 0;
 }
@@ -55,37 +78,41 @@ header a {
   background: white;
 }
 
-@media (max-width: 960px) {
-  header {
-    padding: 60px 0;
-  }
-
-  header h1 {
-    font-size: 48px;
-  }
-
-  header h2 {
-    font-size: 20px;
-  }
-
-  header h3 {
-    font-size: 12px;
-  }
+main {
+  background-color: white;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
 }
 
-section {
-    max-width: 1200px;
-    margin: 0 auto;
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
 }
 
 footer {
   color: white;
-  background-image:linear-gradient(
+  background-image: linear-gradient(
       rgba(39, 32, 68, 0.9),
       rgba(39, 32, 68, 0.9)
     ),
@@ -93,7 +120,6 @@ footer {
 
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h3 {
@@ -106,7 +132,6 @@ footer p {
   font-weight: 400;
   font-size: 16px;
   opacity: 0.7;
-  margin-right: 20px;
   line-height: 24px;
 }
 
@@ -123,4 +148,31 @@ footer li {
 footer a {
   color: white;
   opacity: 0.7;
+}
+
+@media (max-width: 960px) {
+  header {
+    padding: 60px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
+  }
 }
