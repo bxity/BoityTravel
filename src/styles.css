@@ -85,7 +85,10 @@ section {
 
 footer {
   color: white;
-  background-image:
+  background-image:linear-gradient(
+      rgba(39, 32, 68, 0.9),
+      rgba(39, 32, 68, 0.9)
+    ),
     url("../images/ShanghaiFooter.jpg");
 
   background-repeat: no-repeat;
